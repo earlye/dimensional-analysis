@@ -76,7 +76,9 @@ templating engine to perform these checks for you:
 auto l = 14 * meters; // updated a little to modern C++ syntax
 auto t = 2 * seconds;
 
-acceleration a = l / t; // error: cannot assign dimensioned<double,1,-1,0,0,0,0,0>, to dimensioned<double,1,-2,0,0,0,0,0>
+acceleration a = l / t;
+  // error: cannot assign dimensioned<double,1,-1,0,0,0,0,0>
+  // to dimensioned<double,1,-2,0,0,0,0,0>
 ```
 
 What's more, because the C++ templates do not use any dynamic types
