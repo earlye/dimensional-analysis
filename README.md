@@ -87,7 +87,7 @@ directly to loading the values 14 and 2 into registers and then
 dividing (or better, just storing 7 directly into `a`.) In other
 words, there is theoretically no run-time cost to using this library.
 
-So what is necessary to make this work?
+So what is necessary to make this work in Typescript?
 
 Basically, you need to be able to use lists of signed integers as
 generic/template parameters, and to perform signed arithmetic on those

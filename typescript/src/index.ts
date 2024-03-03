@@ -31,8 +31,6 @@ type _Greater<A extends Array<unknown>, B extends Array<unknown>> =
 type Greater<A extends number, B extends number> =
   _Greater< ToArray<A>, ToArray<B> >;
 
-const compileTime = false;
-
 type IfEquals<T, U, Y=unknown, N=never> =
   (<G>() => G extends T ? 1 : 2) extends
   (<G>() => G extends U ? 1 : 2) ? Y : N;
@@ -42,30 +40,11 @@ declare const exactType: <T, U>(
   draft: T & IfEquals<T, U>
 ) => IfEquals<T, U>
 
-  type e3 = 3;
-type E3 = ToNumber<[1,2,3]>;
-compileTime && exactType({} as e3, {} as E3);
-
-type E4 = ToNumber<[1,2,3,4]>;
-//compileTime && exactType({} as e3, {} as E4); // will fail to compile
-
-type s3 = [3,1]
-type S3 = ToSignedNumber<[1,2,3],1>;
-compileTime && exactType({} as s3, {} as S3);
+const compileTime = false;
 
 // Zero always has positive sign.
 type SignedNumber<A, AS extends 1|-1 = 1> =
   A extends 0 ? [A, 1] : [A,AS]
-
-type neg2 = SignedNumber<2,-1>; // -2
-type pos2 = SignedNumber<2,1>;
-type neg4 = SignedNumber<4,-1>; // -2
-type pos4 = SignedNumber<4,1>;
-
-compileTime && exactType({} as neg2,{} as neg2); // should compile
-compileTime && exactType({} as pos2,{} as pos2); // should compile
-// compileTime && exactType({} as neg4,{} as neg2); // shouldn't compile
-// compileTime && exactType({} as neg2,{} as pos2); // shouldn't compile
 
 type _SignedAdd<A extends number, B extends number, AS extends 1|-1, BS extends 1|-1> =
   AS extends 1 ? (

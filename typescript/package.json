@@ -14,7 +14,7 @@
   "scripts": {
     "nuke": "rm -rf node_modules dist",
     "build": "npx tsc",
-    "test": "node dist/index.js"
+    "test": "./test.sh"
   },
   "dependencies": {
     "@types/node": "^20.11.16",
