@@ -1,0 +1,27 @@
+{
+  "name": "typescript-dimensional-analysis",
+  "version": "3.1.0",
+  "description": "An experiment in dimensional analysis",
+  "author": "Earnest Labs",
+  "license": "MIT",
+  "contributors": [
+    "Early Ehlinger"
+  ],
+  "engines": {
+    "node": ">=20.3.0"
+  },
+  "type": "module",
+  "scripts": {
+    "nuke": "rm -rf node_modules dist",
+    "build": "npx tsc",
+    "test": "node dist/index.js"
+  },
+  "dependencies": {
+    "@types/node": "^20.11.16",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+  }
+}

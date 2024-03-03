@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "src",
+    "declaration": true,
+    "removeComments": false,
+    "lib": ["es2022"],
+    "module": "nodenext",
+    "target": "es2022",
+    "outDir": "dist",
+    "paths": {},
+    "moduleResolution": "nodenext",
+    "moduleSuffixes": [".mts", ".mjs", ".ts", ".js", ""],
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "exactOptionalPropertyTypes": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/@earnest-labs/microservice-chassis/typings",
+      "src/typings"
+    ],
+    "types": ["node"]
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.mts", "./src/**/*.js"],
+  "exclude": ["node_modules", "./**/*.spec.js"]
+}
