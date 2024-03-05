@@ -1,5 +1,5 @@
-import "../src/index.js"
+import * as d from "../src/index.js"
 
 type e3 = 3;
-type E3 = ToNumber<[1,2,3]>;
-compileTime && exactType({} as e3, {} as E3);
+type E3 = d.ToNumber<[1,2,3]>;
+d.exactType({} as e3, {} as E3);

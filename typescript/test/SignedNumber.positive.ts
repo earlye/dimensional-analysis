@@ -1,9 +1,9 @@
-import "../src/index.js"
+import * as d from "../src/index.js"
 
-type neg2 = SignedNumber<2,-1>; // -2
-type pos2 = SignedNumber<2,1>;
-type neg4 = SignedNumber<4,-1>; // -2
-type pos4 = SignedNumber<4,1>;
+type neg2 = d.SignedNumber<2,-1>; // -2
+type pos2 = d.SignedNumber<2,1>;
+type neg4 = d.SignedNumber<4,-1>; // -2
+type pos4 = d.SignedNumber<4,1>;
 
-exactType({} as neg2,{} as neg2);
-exactType({} as pos2,{} as pos2);
+d.exactType({} as neg2,{} as neg2);
+d.exactType({} as pos2,{} as pos2);

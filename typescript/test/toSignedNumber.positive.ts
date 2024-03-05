@@ -1,5 +1,5 @@
-import "../src/index.js"
+import * as d from  "../src/index.js"
 
 type s3 = [3,1]
-type S3 = ToSignedNumber<[1,2,3],1>;
-exactType({} as s3, {} as S3);
+type S3 = d.ToSignedNumber<[1,2,3],1>;
+d.exactType({} as s3, {} as S3);
