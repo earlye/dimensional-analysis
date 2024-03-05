@@ -90,7 +90,8 @@ words, there is theoretically no run-time cost to using this library.
 Scott Meyers has a short PDF describing the technique in C++
 [here](https://se.inf.ethz.ch/~meyer/publications/OTHERS/scott_meyers/dimensions.pdf).
 
-So what is necessary to make this work in a given language?
+So what is necessary to make this work at compile-time in a given
+language?
 
 Basically, you need to be able to use lists of signed integers as
 generic/template parameters, and to perform signed addition on those
