@@ -106,7 +106,7 @@ integers. However, it does not _directly_ let us perform signed
 addition on those parameters. What we need is a library that helps us
 perform signed addition. Smirnov showed us how to convert numbers into
 a different domain, _array-length-domain_. Unfortunately, adding and
-subtracting numbers in array length domain can only be doned with
+subtracting numbers in array length domain can only be done with
 positive numbers, and then only with positive numbers in the proper
 order. I.e., `5-2` will result in `3`, but `2-5` will result in `0`
 rather than `-3`, because there is no such thing as a negative length
